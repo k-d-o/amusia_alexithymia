@@ -1,3 +1,28 @@
+name: browser-svc
+description: >-
+  Block for interacting with the base service on a Raspberry Pi device.
+version:  0.0.1
+type: sw.block
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/k-d-o/amusia_alexithymia/balena/blocks'
+  logo:
+    type: blob.asset
+    data:
+      url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmonster.fandom.com%2Fwiki%2FSnark&psig=AOvVaw3ZTt9uO-Kmz_O_629Rdy5J&ust=1745394402782000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiim4CT64wDFQAAAAAdAAAAABAE'
+data:
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberrypi4-64
+    - raspberrypi3
+    - raspberrypi3-64
+    - raspberrypi400-64
+
+
+
+
 version: '2.4'
 
 name: Amusia Browser

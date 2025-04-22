@@ -20,4 +20,4 @@ jobs:
       - name: Push release 
         run: |
           cd balena/blocks
-          balena push g_kyle_doering/amusia_alexithymia
+          balena push amusia-browser --source blocks/block.yml
