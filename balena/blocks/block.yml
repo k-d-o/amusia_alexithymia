@@ -6,7 +6,7 @@ services:
     privileged: true
     network_mode: host
     environment:
-      - LAUNCH_URL=http://localhost:8080/player.html?video=sample1.mp4
+      - LAUNCH_URL
       - KIOSK=true
     restart: always
     
