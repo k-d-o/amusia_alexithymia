@@ -1,0 +1,8 @@
+# amusia_alexithymia/docker-compose.yml
+
+version: '2.1'
+services:
+  browser:
+    image: g_kdo_/kdo_browser
+    restart: always
+    privileged: true
