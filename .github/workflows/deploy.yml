@@ -1,0 +1,23 @@
+name: Deploy to balena
+
+on: 
+  pull_request:
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  fleet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup balena CLI
+        uses: balena-io-examples/setup-balena-action@main
+        with:
+          balena-token: ${{secrets.BALENA_API_KEY}}
+      - name: Push release 
+        run: |
+          cd balena/blocks
+          balena push g_kyle_doering/amusia_alexithymia
