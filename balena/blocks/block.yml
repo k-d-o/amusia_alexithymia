@@ -1,12 +1,15 @@
 version: '2.4'
 
-services:
-  browser:
-    image: bh.cr/balenalabs/browser-aarch64
-    privileged: true
-    network_mode: host
-    environment:
-      - LAUNCH_URL
-      - KIOSK=true
-    restart: always
+name: Amusia Browser
+description: |
+  A simple browser for the Amusia project, running on balenaOS.
+  services:
+    browser:
+      image: bh.cr/balenalabs/browser-aarch64
+      privileged: true
+      network_mode: host
+      environment:
+        - LAUNCH_URL
+        - KIOSK=true
+      restart: always
     
