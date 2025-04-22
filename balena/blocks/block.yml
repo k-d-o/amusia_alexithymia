@@ -1,6 +1,6 @@
 name: browser-svc
 description: >-
-  Block for interacting with the base service on a Raspberry Pi device.
+  A basic browser service for the Amusia project, running on balenaOS.
 version:  0.0.1
 type: sw.block
 assets:
@@ -19,16 +19,7 @@ data:
     - raspberrypi3
     - raspberrypi3-64
     - raspberrypi400-64
-
-
-
-
-version: '2.4'
-
-name: Amusia Browser
-description: |
-  A simple browser for the Amusia project, running on balenaOS.
-  services:
+services:
     browser:
       image: bh.cr/balenalabs/browser-aarch64
       privileged: true
@@ -36,9 +27,5 @@ description: |
       environment:
         - LAUNCH_URL
         - KIOSK=true
-      - name: Push block to Balena
-        run: balena push amusia-browser --source blocks/block.yml
-        env:
-          BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
 
     
