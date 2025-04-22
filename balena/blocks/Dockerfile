@@ -5,10 +5,10 @@ FROM balenalib/raspberrypi3-python:3.10
 WORKDIR /usr/src/app
 
 # Copy files
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# COPY requirements.txt ./
+# RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# COPY . .
 
 # Optional environment variables
 ENV DB_HOST=localhost
