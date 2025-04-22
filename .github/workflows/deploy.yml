@@ -20,4 +20,5 @@ jobs:
       - name: Push release 
         run: |
           cd balena/blocks
-          balena push amusia-browser --source balena/blocks
+          ls
+          balena push amusia-browser --source k-d-o/blocks
