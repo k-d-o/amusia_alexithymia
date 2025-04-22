@@ -21,4 +21,4 @@ jobs:
         run: |
           cd balena/blocks
           ls
-          balena push amusia-browser --source balena/blocks
+          balena push amusia-browser --source .
