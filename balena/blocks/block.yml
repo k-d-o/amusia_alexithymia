@@ -11,5 +11,9 @@ description: |
       environment:
         - LAUNCH_URL
         - KIOSK=true
+      - name: Push block to Balena
+        run: balena push my-block-app --source blocks/my-block
+        env:
+          BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
       restart: always
     
