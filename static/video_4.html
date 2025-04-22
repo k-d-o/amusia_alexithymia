@@ -25,6 +25,12 @@
 
 <body>
     <video src="/video/video_4.mp4" controls autoplay loop muted></video>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const videoFile = params.get("video" || "video_1.mp4");
+        document.getElementById("video").src = `/video/${videoFile}`;
+    </script>
 </body>
 
 </html>

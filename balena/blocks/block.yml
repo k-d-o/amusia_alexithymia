@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+  browser:
+    image: bh.cr/balenalabs/browser-aarch64
+    privileged: true
+    network_mode: host
+    environment:
+      - LAUNCH_URL=http://localhost:8080/player.html?video=sample1.mp4
+      - KIOSK=true
+    restart: always
+    
