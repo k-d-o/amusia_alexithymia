@@ -1,31 +1,24 @@
-name: browser-svc
-description: >-
-  A basic browser service for the Amusia project, running on balenaOS.
-version:  0.0.1
+name: browser
+version: 0.0.1
+description: A hardware accelerated web browser to present internal and external URLs on a connected display
 type: sw.block
+image: bh.cr/balenablocks/browser-armv7hf
+environent:
+  - KIOSK=1
+
 assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/k-d-o/amusia_alexithymia/balena/blocks'
-  logo:
-    type: blob.asset
-    data:
-      url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmonster.fandom.com%2Fwiki%2FSnark&psig=AOvVaw3ZTt9uO-Kmz_O_629Rdy5J&ust=1745394402782000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiim4CT64wDFQAAAAAdAAAAABAE'
+      url: 'https://github.com/k-d-o/amusia_alexithymia.git'
+    logo: 
+      type: blob.asset
+      data:
+        url: 'https://raw.githubusercontent.com/k-d-o/amusia_alexithymia/main/balena/blocks/balena.png'
 data:
-  defaultDeviceType: raspberrypi4-64
+  defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
-    - raspberrypi4-64
     - raspberrypi3
-    - raspberrypi3-64
-    - raspberrypi400-64
-services:
-    browser:
-      image: bh.cr/balenalabs/browser-aarch64
-      privileged: true
-      network_mode: host
-      environment:
-        - LAUNCH_URL
-        - KIOSK=true
-
+    - raspberrypi4
+    - raspberrypi4-64
     
