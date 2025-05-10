@@ -11,7 +11,7 @@ environment:
   - RST_PIN=27
   - DC_PIN=25
   - BL_PIN=24
-  - VIDEO_SERVER_URL=http://localhost:8080
+  - VIDEO_SERVER_URL=http://192.168.0.209:8080/video_1.html
 
 assets:
   repository:
