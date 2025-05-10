@@ -1,0 +1,37 @@
+name: spi-display
+version: 0.0.1
+description: A block to control ST7789 SPI displays and play videos on Raspberry Pi
+type: sw.block
+image: bh.cr/balenablocks/spi-display-armv7hf
+environment:
+  - DISPLAY_WIDTH=320
+  - DISPLAY_HEIGHT=240
+  - SPI_BUS=0
+  - SPI_DEVICE=0
+  - RST_PIN=27
+  - DC_PIN=25
+  - BL_PIN=24
+  - VIDEO_SERVER_URL=http://localhost:8080
+
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/k-d-o/amusia_alexithymia.git'
+    logo: 
+      type: blob.asset
+      data:
+        url: 'https://raw.githubusercontent.com/k-d-o/amusia_alexithymia/main/balena/blocks/balena.png'
+data:
+  defaultDeviceType: raspberrypi3
+  supportedDeviceTypes:
+    - raspberrypi3
+    - raspberrypi4
+    - raspberrypi4-64
+  deviceConfiguration:
+    - name: spi
+      type: boolean
+      default: true
+    - name: gpio
+      type: boolean
+      default: true 

@@ -1,0 +1,14 @@
+version: '2'
+services:
+  browser:
+    image: bh.cr/g_kyle_doering/browser
+    privileged: true
+    network_mode: host
+    # Optional configuration:
+    environment:
+      - LAUNCH_URL=https://www.everythingisterrible.com  # Optional: specify URL to display
+    # If you need persistence:
+    volumes:
+      - 'settings:/data'
+volumes:
+  settings:
