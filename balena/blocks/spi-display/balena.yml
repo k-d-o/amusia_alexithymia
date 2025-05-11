@@ -11,7 +11,7 @@ environment:
   - RST_PIN=27
   - DC_PIN=25
   - BL_PIN=24
-  - VIDEO_SERVER_URL=http://192.168.0.209:8080/video_1.html
+  - VIDEO_SERVER_URL=http://192.168.1.176:8080/video/grey_amusia1.MOV
 
 assets:
   repository:
@@ -34,4 +34,8 @@ data:
       default: true
     - name: gpio
       type: boolean
-      default: true 
+      default: true
+    - name: VIDEO_SERVER_URL
+      type: string
+      default: "http://192.168.1.176:8080/video/grey_amusia1.MOV"
+      description: "URL of the video server to stream videos from" 

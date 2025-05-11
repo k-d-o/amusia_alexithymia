@@ -7,6 +7,8 @@ services:
   browser:
     image: bh.cr/balenalabs/browser-aarch64 # where <arch> is one of aarch64, arm32 or amd64
     privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
+    environment:
+      - VIDEO_SERVER_URL=http://192.168.1.176:8080/video/IMG_rotating_stock.MOV
     ports:
         - '5011' # management API (optional)
         - '35173' # Chromium debugging port (optional)
